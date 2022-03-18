@@ -9,6 +9,7 @@ import { ResponseResetComponent } from './components/password/response-reset/res
 import { ProfileComponent } from './components/profile/profile.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { StudentsEditComponent } from './components/students-edit/students-edit.component';
+import { VideosComponent } from './components/videos/videos.component';
 
 
 const routes: Routes = [
@@ -48,7 +49,12 @@ const routes: Routes = [
     path: 'student/edit/:id',
     component: StudentsEditComponent,
     canActivate: [AfterLoginService]
-  }
+  },
+  {
+    path: 'videos',
+    component: VideosComponent,
+    canActivate: [AfterLoginService]
+  },
 
 ];
 

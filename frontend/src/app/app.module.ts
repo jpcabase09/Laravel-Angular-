@@ -15,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { JarwisService } from './services/jarwis.service';
 import { StudentsComponent } from './components/students/students.component';
-import { StudentsEditComponent } from './components/students-edit/students-edit.component' // where your services are.
+import { StudentsEditComponent } from './components/students-edit/students-edit.component';
+import { VideosComponent } from './components/videos/videos.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { StudentsEditComponent } from './components/students-edit/students-edit.
     RequestResetComponent,
     ResponseResetComponent,
     StudentsComponent,
-    StudentsEditComponent
+    StudentsEditComponent,
+    VideosComponent,
   ],
   imports: [
     BrowserModule,

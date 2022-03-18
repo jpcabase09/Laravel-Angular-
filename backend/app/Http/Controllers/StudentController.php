@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\SignUpRequest;
+use App\Http\Requests\StudentRequest;
 use App\Models\Student;
 use App\Models\Course;
 use App\Models\User;
@@ -28,7 +29,7 @@ class StudentController extends Controller
         return $students;
     }
 
-    public function addStudent(Request $request)
+    public function addStudent(StudentRequest $request)
     {
 
         $user = new User;

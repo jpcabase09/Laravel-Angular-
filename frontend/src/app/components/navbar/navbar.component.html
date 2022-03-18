@@ -6,7 +6,8 @@
     <div>
         <a style="color:white" class=" navbar-brand" routerLink="login" *ngIf="!loggedIn">Login</a>
 
-        <a style="color:white" class="navbar-brand" routerLink="profile" *ngIf="loggedIn">Video Playlist</a>
+        <a style="color:white" class="navbar-brand" routerLink="videos" *ngIf="loggedIn">Video Playlist</a>
+        <a style="color:white" class="navbar-brand" routerLink="student" *ngIf="loggedIn">List of Students</a>
         <a style="color:white" class="navbar-brand" href="#" (click)="logout($event)" *ngIf="loggedIn">Logout</a>
     </div>
 

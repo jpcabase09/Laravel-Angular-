@@ -32,4 +32,9 @@ export class DataService {
     return this.http.put('http://127.0.0.1:8001/api/student/update/' + id, data);
   }
 
+  getVideo() {
+    return this.http.get('https://vimeo.com/api/oembed.json?url=https://vimeo.com/688486307');
+    //return this.http.get('https://vimeo.com/684675242');
+  }
+
 }

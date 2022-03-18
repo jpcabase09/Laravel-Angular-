@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 })
 export class StudentsComponent implements OnInit {
 
-
   courses: any;
 
   students: any;
@@ -19,6 +18,23 @@ export class StudentsComponent implements OnInit {
   selectedCategory: any;
   message: boolean = false;
   alert: boolean = false;
+
+  public error: any = [];
+
+  public form = {
+    email: null,
+    name: null,
+    password: null,
+    password_confirmation: null,
+    course_id: null,
+    year: null,
+    address: null,
+    age: null,
+    contact_number: null,
+    gender: null,
+  }
+
+
 
   constructor(private dataService: DataService, private router: Router) { }
 
@@ -40,14 +56,19 @@ export class StudentsComponent implements OnInit {
   }
 
   addStudent() {
-    this.dataService.insertStudent(this.student).subscribe(res => {
-      this.getStudentData()
-      this.alert = true;
-      setTimeout(() => {
-        this.router.navigateByUrl('/student');
-      }, 2000);  //5s
+    this.dataService.insertStudent(this.student).subscribe(
+      res => {
+        this.getStudentData(),
+          this.alert = true;
+        setTimeout(() => {
+          this.router.navigateByUrl('/student');
+        }, 2000);  //5s
 
-    })
+      }, error => this.handleError(error))
+  }
+
+  handleError(error: any) {
+    this.error = error.error.errors;
   }
 
   onDisplayCategory() {
