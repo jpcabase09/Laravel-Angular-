@@ -1,0 +1,26 @@
+<!-- As a link -->
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand" href="#" style="margin-left: 50px;">Laravel + Angular Authentication using JWT + (CRUD)</a>
+
+    <div>
+        <a class=" navbar-brand" routerLink="login" *ngIf="!loggedIn">Login</a>
+        <a class="navbar-brand" href="#" (click)="logout($event)" *ngIf="loggedIn">Logout</a>
+        <a class="navbar-brand" routerLink="profile" *ngIf="loggedIn">Profile</a>
+    </div>
+
+
+</nav>
+
+
+<html>
+
+<body>
+    <center>
+        <h3>Create a CRUD of the basic registration process of students (with Users, students & course table) using
+            Laravel(v.8+) as a backend(implement eloquent) mySQL as your database(implement basic table relationship)
+            and
+            Angular(v12+) in the front-end.</h3>
+    </center>
+</body>
+
+</html>
