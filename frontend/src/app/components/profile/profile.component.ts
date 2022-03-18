@@ -10,6 +10,11 @@ export class ProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.getStudents();
+  }
+
+  getStudents() {
+    console.log("List of students");
   }
 
 }

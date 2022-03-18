@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  public loggedIn: boolean;
+  public loggedIn: boolean = false;
 
   constructor(
     private Auth: AuthService,

@@ -1,3 +1,4 @@
+import { StudentsComponent } from './components/students/students.component';
 import { AfterLoginService } from './services/after-login.service';
 import { BeforeLoginService } from './services/before-login.service';
 import { NgModule } from '@angular/core';
@@ -7,6 +8,7 @@ import { RequestResetComponent } from './components/password/request-reset/reque
 import { ResponseResetComponent } from './components/password/response-reset/response-reset.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { StudentsEditComponent } from './components/students-edit/students-edit.component';
 
 
 const routes: Routes = [
@@ -34,6 +36,17 @@ const routes: Routes = [
   {
     path: 'response-password-reset',
     component: ResponseResetComponent,
+    canActivate: [AfterLoginService]
+  },
+
+  {
+    path: 'student',
+    component: StudentsComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'student/edit/:id',
+    component: StudentsEditComponent,
     canActivate: [AfterLoginService]
   }
 

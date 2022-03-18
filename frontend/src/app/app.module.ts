@@ -13,7 +13,9 @@ import { ResponseResetComponent } from './components/password/response-reset/res
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { JarwisService } from './services/jarwis.service' // where your services are.
+import { JarwisService } from './services/jarwis.service';
+import { StudentsComponent } from './components/students/students.component';
+import { StudentsEditComponent } from './components/students-edit/students-edit.component' // where your services are.
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { JarwisService } from './services/jarwis.service' // where your services
     SignupComponent,
     ProfileComponent,
     RequestResetComponent,
-    ResponseResetComponent
+    ResponseResetComponent,
+    StudentsComponent,
+    StudentsEditComponent
   ],
   imports: [
     BrowserModule,

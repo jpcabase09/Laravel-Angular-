@@ -40,10 +40,11 @@ export class SignupComponent implements OnInit {
 
   handelResponse(data: any) {
     this.Token.handle(data.access_token);
-    this.router.navigateByUrl('/profile');
+    this.router.navigateByUrl('/student');
   }
 
   ngOnInit(): void {
   }
 
 }
+

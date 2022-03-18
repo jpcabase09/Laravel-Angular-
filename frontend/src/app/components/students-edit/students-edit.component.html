@@ -1,0 +1,147 @@
+<div class=" container" style="margin-top:50px;">
+    <div *ngIf="alert" class="alert alert-success" role="alert">
+        Successfully added student!
+    </div>
+    <form (ngSubmit)="updateStudent()">
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="name" name="name" class="form-control" [(ngModel)]="student.name" id="inputName"
+                            placeholder="Name" required>
+
+                    </div>
+                </div><br>
+
+            </div>
+
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" name="email" class="form-control" [(ngModel)]="student.email"
+                            id="inputEmail3" placeholder="Email" required>
+
+                    </div>
+                </div><br>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" name="password" class="form-control" id="inputPassword3"
+                            placeholder="Password" [(ngModel)]="student.password" required>
+
+                    </div>
+                </div><br>
+            </div>
+
+            <div class="col">
+                <div class="form-group row">
+                    <label for="PasswordConfirmation" class="col-sm-2 col-form-label">Confirm Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" name="password_confirmation" class="form-control"
+                            id="PasswordConfirmation    " placeholder="Confirm Password"
+                            [(ngModel)]="student.password_confirmation" required>
+                    </div>
+                </div><br>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="PasswordConfirmation" class="col-sm-2 col-form-label">Course</label>
+                    <div class="col-sm-10">
+                        <select name="course_id" id="course_id" class="form-control" [(ngModel)]="student.course_id">
+                            <!-- <option *ngFor="let course of courses" [ngValue]="{{course}}">{{course.course_name}} -->
+                            <option *ngFor="let item of courses" [ngValue]="item.id">{{item.course_name}}</option>
+                        </select>
+                    </div>
+                </div><br>
+            </div>
+
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputYear" class="col-sm-2 col-form-label">Year</label>
+                    <div class="col-sm-10">
+                        <input type="name" name="year" class="form-control" [(ngModel)]="student.year" id="inputYear"
+                            placeholder="Year" required>
+
+                    </div>
+                </div><br>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputAddress" class="col-sm-2 col-form-label">Address</label>
+                    <div class="col-sm-10">
+                        <input type="name" name="address" class="form-control" [(ngModel)]="student.address"
+                            id="inputAddress" placeholder="Address" required>
+
+                    </div>
+                </div><br>
+            </div>
+
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputAge" class="col-sm-2 col-form-label">Age</label>
+                    <div class="col-sm-10">
+                        <input type="name" name="age" class="form-control" [(ngModel)]="student.age" id="inputAge"
+                            placeholder="Age" required>
+
+                    </div>
+                </div><br>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputContactNumber" class="col-sm-2 col-form-label">Contact Number</label>
+                    <div class="col-sm-10">
+                        <input type="name" name="contact_number" class="form-control"
+                            [(ngModel)]="student.contact_number" id="inputContactNumber" placeholder="09XXXXXXXXX"
+                            required>
+
+                    </div>
+                </div><br>
+            </div>
+
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputBirthdate" class="col-sm-2 col-form-label">Gender</label>
+                    <div class="col-sm-10">
+                        <select [(ngModel)]="student.gender" name="gender" id="gender" class="form-control">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+
+                    </div>
+                </div><br>
+            </div>
+        </div>
+
+
+
+        <div class=" form-group row">
+            <div class="">
+                <button type=" submit" class="btn btn-primary">Update Student</button>
+
+            </div>
+        </div>
+    </form>
+
+</div>
